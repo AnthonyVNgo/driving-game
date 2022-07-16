@@ -1,5 +1,8 @@
 var f1Position = {
-  position: 0
+  position: 0,
+  x: 0,
+  y: 0,
+  ignitionOn: false
 };
 
 var f1Element = document.querySelector('#f1');
@@ -27,3 +30,20 @@ function steering(event) {
 }
 
 document.addEventListener('keydown', steering);
+
+function edoTenseiJutsu(event) {
+  // const myinterval = setInterval(start, 10);
+  if (event.key === ' ' && f1Position.ignitionOn === false) {
+    // f1Position.ignitionOn = true;
+  }
+}
+
+// function start() {
+//   f1Position.x += 10;
+//   f1Element.style.left = f1Position.x + 'px';
+// }
+
+document.addEventListener('keydown', edoTenseiJutsu);
+
+// if (event.key === ' ' && f1Position.ignitionOn === true) {
+// }
