@@ -31,19 +31,21 @@ function steering(event) {
 
 document.addEventListener('keydown', steering);
 
+let interval;
+
+function start() {
+  f1Position.x += 5;
+  f1Element.style.left = f1Position.x + 'px';
+}
+
 function edoTenseiJutsu(event) {
-  // const myinterval = setInterval(start, 10);
   if (event.key === ' ' && f1Position.ignitionOn === false) {
-    // f1Position.ignitionOn = true;
+    f1Position.ignitionOn = true;
+    interval = setInterval(start, 75);
+  } else if (event.key === ' ' && f1Position.ignitionOn === true) {
+    f1Position.ignitionOn = false;
+    clearInterval(interval);
   }
 }
 
-// function start() {
-//   f1Position.x += 10;
-//   f1Element.style.left = f1Position.x + 'px';
-// }
-
 document.addEventListener('keydown', edoTenseiJutsu);
-
-// if (event.key === ' ' && f1Position.ignitionOn === true) {
-// }
