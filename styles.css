@@ -5,8 +5,10 @@ body {
 }
 
 #f1 {
+  position: absolute;
   width: 6.5rem;
   transition-duration: 1s;
+  transition-timing-function: linear;
 }
 
 .up {
